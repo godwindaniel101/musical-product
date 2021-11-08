@@ -3,5 +3,4 @@ src/bootstrap
 src/node_modules
 src/.env
 src/storage
-apache
 docker
