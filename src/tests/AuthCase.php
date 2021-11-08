@@ -30,10 +30,10 @@ abstract class AuthCase extends BaseTestCase
 
         $data =  $response_login->getOriginalContent();
 
-        $token = $data['data']['token'];
+        $this->token = $data['data']['token'];
 
         $this->withHeaders([
-            'Authorization' => 'Bearer ' . $token,
+            'Authorization' => 'Bearer ' . $this->token,
             'Accept' => 'application/json'
         ]);
 

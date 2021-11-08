@@ -96,16 +96,26 @@ Delete Records of user purchase on a particular product
 
 
 **Software Assumptions**
-- A user can only purchase item they are yet to purchase. a user could be allowed to purchase one item multiple times but then the need for quantity count will be required which is beyound the scope of this project
-- To use the. post man collection kindly import The collection and collection environment into your postman 
+- A user can only purchase item they are yet to purchase.
 
-- The use of some coding concepts such as microservices, database partinoning, respository structures etc, was avoiding during this code design due to the scope task requirement
+- When using Postman to test, the Postman collection and environment files found in the root folder of the  project must have been imported and selected.
 
-- Port 8008, 3306 and 8020 are required to be available for docker container to work
+- The use of some coding concepts such as micro-services, database partitioning, Repository structures etc, was avoiding during this code design due to the scope of the task requirement.
 
-- All response from the Application are also presented on **stdout**, thus visable on the docker console 
+- Port 8008, 3306 and 8020 are required to be available for Docker Container to work.
 
-- Testing should be done within the docker container to ensure all running instance are the same
-- Use of caching was used only for application configuration and not on system operation, this is due to the dynamic nature of the data. That is , the product , purchase and user record changes often
+- All response from the Application are also presented on *stdout*, thus visible on the Docker console.
+
+- Testing will be done within the Docker container to ensure all running instance are the same.
+
+- Use of caching was used only for application configuration and not on system operation, this is due to the dynamic nature of the data. That is , the product , purchase and user record changes often.
+
+**Software Assumptions**
+- A user should be allowed to purchase one item multiple times but then the need for quantity count will be required.
+
+- For scaling the use of microservices or modular code structure is highly recommended
 
 #####Best  Regards!
+
+
+
