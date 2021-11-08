@@ -1,12 +1,3 @@
-##Setup
-cp ./src/env.example ./src/env
-docker-compose up --build -d
-docker-compose exec app /bin/bash
-composer install
-php artisan migrate --seed
-php artisan passport:install
-
-
 
 ## About Application
 A product purchase web application which gives users the apbility to purchase product and store product record. Basic functionality include.
@@ -21,14 +12,14 @@ The software was designed on docker version 20.10.8
 
 **Application Initial Set Up**
 - Clone application from git respository or unzip project archive;
-- Open  project directory  
-`cd  muscial_instrument  `
+- Open  project directory  `cd  muscial_instrument  `
 - Copy environmental vairables. `cp ./src/env.example ./src/env`
 - Spin up docker    `docker-compose up --build -d`
 - Open docker bash  `docker-compose exec app /bin/bash`
--
-- Set up Database and seed records from csv `php artisan migrate --seed`
-- Set up laravel passport. `php artisan passport:install`
+- Run the following command on docker bash
+		composer install
+		php artisan migrate --seed
+		php artisan passport:install
 - Application should be available on  port 8008
 
 **Running Application**
@@ -37,7 +28,7 @@ The software was designed on docker version 20.10.8
 - Application can be brought down by running the command   `docker-compose down `
 
 **Testing  Application**
-- Spin up the application by runing `docker-compose up --build -d`
+-After inital set up above, spin up the application by runing `docker-compose up --build -d`
 - Run application shell by running    `docker-compose exec app /bin/bash`
 - Run test by running  `php artisan test`
 - **Note**  Test is also run on application bash to persist php version on test and runing instance 
