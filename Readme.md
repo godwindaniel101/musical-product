@@ -8,24 +8,24 @@ A product purchase web application which gives users the ability to purchase pro
 - Product purchase 
 
 **System Requirement**
-The software was designed on docker version 20.10.8
+- The software was designed on docker version 20.10.8
 
 **Application Initial Set Up**
 - Clone application from git respository or unzip project archive;
 - Open  project directory  `cd  muscial_instrument  `
-- Copy environmental vairables. `cp ./src/env.example ./src/env`
+- Copy environmental vairables. `cp ./src/.env.example ./src/.env`
 - Spin up docker    `docker-compose up --build -d`
 - Open docker bash  `docker-compose exec app /bin/bash`
 - Run the following command on docker bash
 
-  `composer install   && php artisan migrate --seed  && php artisan passport:install`
+  `composer install  && php artisan migrate --seed   && php artisan passport:install`
   
 - Application should be available on  port 8008
 
 **Running Application**
-- After inital set up above application can easily be brought up by runinng the command ; 
+- After inital set up above application can easily be brought up by runinng the command   
 `docker-compose up --build -d`
-- Application can be brought down by running the command   `docker-compose down `
+- Application can be brought down by running the command  `docker-compose down `
 
 **Testing  Application**
 -After inital set up above, spin up the application by runing `docker-compose up --build -d`
