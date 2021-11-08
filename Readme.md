@@ -1,6 +1,6 @@
 
 ## About Application
-A product purchase web application which gives users the apbility to purchase product and store product record. Basic functionality include.
+A product purchase web application which gives users the ability to purchase product and store product record. Basic functionality include.
 
 - Authentication
 - User creation
