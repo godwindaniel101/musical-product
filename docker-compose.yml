@@ -28,15 +28,7 @@ services:
         PMA_USER: musical_instrument
         PMA_PASSWORD: password
       restart: unless-stopped
-
-  redis:
-      container_name: redis
-      image: redis:latest
-      ports:
-        - "6379:6379"
-      volumes:
-        - ./docker/redis_data:/data
-
+      
   app:
     container_name: app
     build:

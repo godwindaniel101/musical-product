@@ -13,12 +13,12 @@ The software was designed on docker version 20.10.8
 **Application Initial Set Up**
 - Clone application from git respository or unzip project archive;
 - Open  project directory  `cd  muscial_instrument  `
-- Copy environmental vairables. `cp ./src/.env.example ./src/env`
+- Copy environmental vairables. `cp ./src/env.example ./src/env`
 - Spin up docker    `docker-compose up --build -d`
 - Open docker bash  `docker-compose exec app /bin/bash`
 - Run the following command on docker bash
 
-  `composer install  php artisan migrate --seed php artisan passport:install`
+  `composer install   && php artisan migrate --seed  && php artisan passport:install`
   
 - Application should be available on  port 8008
 
@@ -100,11 +100,9 @@ Delete Records of user purchase on a particular product
 
 - The use of some coding concepts such as microservices, database partinoning, respository structures etc, was avoiding during this code design due to the scope task requirement
 
-- port 8008, 3306 and 8020 are required to be available for docker container to work
+- Port 8008, 3306 and 8020 are required to be available for docker container to work
 
 - All response from the Application are also presented on **stdout**, thus visable on the docker console 
 
-- testing should be done within the docker container to ensure all running instance are the same
-- use of caching was used only for application configuration and not on system operation, this is due to the dynamic nature of the data. That is , the product , purchase and user record changes often
-
--
+- Testing should be done within the docker container to ensure all running instance are the same
+- Use of caching was used only for application configuration and not on system operation, this is due to the dynamic nature of the data. That is , the product , purchase and user record changes often
