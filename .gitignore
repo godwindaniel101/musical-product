@@ -1,5 +1,5 @@
 src/vendor
-src/bootstrap
+src/bootstrap/cache
 src/node_modules
 src/.env
 src/storage

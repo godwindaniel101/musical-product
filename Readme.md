@@ -13,7 +13,7 @@ The software was designed on docker version 20.10.8
 **Application Initial Set Up**
 - Clone application from git respository or unzip project archive;
 - Open  project directory  `cd  muscial_instrument  `
-- Copy environmental vairables. `cp ./src/env.example ./src/env`
+- Copy environmental vairables. `cp ./src/.env.example ./src/env`
 - Spin up docker    `docker-compose up --build -d`
 - Open docker bash  `docker-compose exec app /bin/bash`
 - Run the following command on docker bash
