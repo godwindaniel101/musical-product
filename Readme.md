@@ -97,6 +97,7 @@ Delete Records of user purchase on a particular product
 
 **Software Assumptions**
 - A user can only purchase item they are yet to purchase. a user could be allowed to purchase one item multiple times but then the need for quantity count will be required which is beyound the scope of this project
+- To use the. post man collection kindly import The collection and collection environment into your postman 
 
 - The use of some coding concepts such as microservices, database partinoning, respository structures etc, was avoiding during this code design due to the scope task requirement
 
