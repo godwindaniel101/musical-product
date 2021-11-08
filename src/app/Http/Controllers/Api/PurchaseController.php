@@ -60,7 +60,7 @@ class PurchaseController extends BaseController
 
             $purchaseChecker = Purchase::where('product_sku', $request->input('product_sku'))
                 ->where('user_id', Auth::user()->id)
-                ->exists();
+                ->exists(); //check if a user has already purchased a product and prevent the user from buying twice
 
             if ($purchaseChecker) {
                 return $this->sendError('Purchase Error.', 'You already have this item purchased.', 422);
@@ -93,7 +93,8 @@ class PurchaseController extends BaseController
             $purchase = Purchase::where('product_sku', $productSku)
                 ->where('user_id', Auth::user()->id);
 
-            if (!$purchase->exists()) {
+            if (!$purchase->exists()) { //prevent user from attempting to delete product they have not purchased
+
                 return $this->sendError('Purchase Error.', 'You do not have this item purchased.', 422);
             }
 
