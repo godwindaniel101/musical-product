@@ -60,13 +60,13 @@ Returns an array of all users
 
 Returns an array of all Products
 
-**Create Product **  
+**Create Product**  
 
 `POST : {baseUrl}/products`
 
 Handles creation of new products 
 
-**Get current  logged in user detail **  
+**Get current  logged in user detail**  
 
 `GET : {baseUrl}/user`
 
@@ -106,3 +106,5 @@ Delete Records of user purchase on a particular product
 
 - Testing should be done within the docker container to ensure all running instance are the same
 - Use of caching was used only for application configuration and not on system operation, this is due to the dynamic nature of the data. That is , the product , purchase and user record changes often
+
+#####Best  Regards!
